@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.voidtech.userservice.mapper.ImageInfoMapper">
+    <resultMap id="BaseResultMap" type="cn.voidtech.userservice.domain.ImageInfoEntity">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="filename" jdbcType="VARCHAR" property="filename"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="delete" jdbcType="TINYINT" property="delete"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        `id`, `filename`, `url`, `delete`
+    </sql>
+
+</mapper>

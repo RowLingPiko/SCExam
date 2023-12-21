@@ -1,0 +1,37 @@
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+logging:
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss
+spring:
+  application:
+    name: uniapp
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connect-timeout: 2000
+            read-timeout: 2000
+  servlet:
+    multipart:
+      max-file-size: 1GB
+      max-request-size: 10GB
+
+resilience4j:
+  timelimiter:
+    instances:
+      delay:
+        timeout-duration: 2
+
+
+mybatis-flex:
+  datasource:
+    ds1:
+      url: jdbc:mysql://localhost:3306/ptt
+      username: root
+      password: LWT5201314wan..

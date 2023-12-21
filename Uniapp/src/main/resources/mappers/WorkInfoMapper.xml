@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.voidtech.uniapp.mapper.WorkInfoMapper">
+    <resultMap id="BaseResultMap" type="cn.voidtech.uniapp.entity.domain.WorkInfoEntity">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="poster" jdbcType="VARCHAR" property="poster"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="author" jdbcType="VARCHAR" property="author"/>
+        <result column="detail" jdbcType="VARCHAR" property="detail"/>
+        <result column="relationvid" jdbcType="INTEGER" property="relationvid"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        `id`, `poster`, `name`, `author`, `detail`, `relationvid`, `create_time`
+    </sql>
+
+</mapper>
